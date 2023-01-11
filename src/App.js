@@ -18,7 +18,7 @@ function App() {
         if (data.cod >= 400) {
           setValues(false)
         } else {
-          setIcon(data.weather[0].main)
+          setIcon(data.weather[0].icon)
           setValues(data)
         }
       })
@@ -35,6 +35,8 @@ function App() {
   useEffect(() => {
     getData()
   }, [search]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  //const ubi = `http://openweathermap.org/img/wn/${icon}@4x.png`
 
   return (
     <>
